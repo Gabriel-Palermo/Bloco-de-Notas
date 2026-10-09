@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880760892372",
+    "project_id": "blobo-de-notas",
+    "storage_bucket": "blobo-de-notas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880760892372:android:a3dd8af0972039a0ccc441",
+        "android_client_info": {
+          "package_name": "com.example.bloco_de_nota"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIq48PgdG8hDabve7tLZYW_uEN1eTlLuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
