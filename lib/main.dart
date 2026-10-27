@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,37 +24,35 @@ class MyApp extends StatelessWidget {
           seedColor: Color(0xFF6c4ab6),
           brightness: Brightness.light,
         ),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFF7F5FC),
-          foregroundColor: Color(0xFF292333),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xfff7f5fc),
+          foregroundColor: Color(0xff292333),
           elevation: 0,
           centerTitle: false,
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,
-          contentPadding: EdgeInsets.symmetric(
-            vertical: 17.0,
-            horizontal: 20.0,
-          ),
+          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 17),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18.0),
+            borderRadius: BorderRadius.circular(18),
             borderSide: BorderSide.none,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18.0),
+            borderRadius: BorderRadius.circular(18),
             borderSide: BorderSide.none,
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18.0),
-            borderSide: BorderSide(color: Color(0xFF6c4ab6), width: 2.0),
+            borderRadius: BorderRadius.circular(18),
+            borderSide: BorderSide(color: Color(0XFF6C4AB6), width: 2),
           ),
         ),
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: Color(0xFF6c4ab6),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(18),
             ),
           ),
         ),
