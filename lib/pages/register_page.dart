@@ -93,7 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(height: 10),
             Text(
               "Crie sua conta para começar",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.grey[600], fontSize: 15),
             ),
             SizedBox(height: 35),
             Text(
@@ -177,7 +177,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   ? CircularProgressIndicator(color: Colors.white)
                   : Text(
                       "Criar minha conta",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
             ),
           ],
