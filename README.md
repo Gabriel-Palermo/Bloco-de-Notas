@@ -1,17 +1,99 @@
-# bloco_de_nota
+# Bloco de Notas
 
-A new Flutter project.
+Aplicativo de anotações desenvolvido em Flutter como projeto acadêmico, com armazenamento local utilizando SQLite e sincronização em nuvem através do Firebase Cloud Firestore.
 
-## Getting Started
+## Sobre o projeto
 
-This project is a starting point for a Flutter application.
+O Bloco de Notas permite que cada usuário crie, edite, visualize e exclua suas anotações. O aplicativo utiliza o SQLite para armazenamento local e o Firebase para autenticação e sincronização dos dados na nuvem.
 
-A few resources to get you started if this is your first Flutter project:
+A evolução do projeto adicionou a integração com o Cloud Firestore, permitindo que as anotações sejam associadas ao usuário autenticado e recuperadas mesmo após sair e entrar novamente na conta.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Tecnologias utilizadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter:** desenvolvimento da interface e aplicação.
+- **Dart:** linguagem de programação.
+- **SQLite:** armazenamento local das anotações.
+- **Firebase Authentication:** cadastro e autenticação de usuários.
+- **Cloud Firestore:** armazenamento e sincronização das anotações na nuvem.
+- **sqflite_common_ffi_web:** suporte ao SQLite no Flutter Web.
+
+## Funcionalidades
+
+- Cadastro de usuários.
+- Login e logout.
+- Criação de anotações.
+- Edição de anotações existentes.
+- Exclusão de anotações.
+- Armazenamento local com SQLite.
+- Sincronização das anotações com o Firebase Firestore.
+- Associação das anotações ao usuário autenticado.
+- Recuperação das anotações após novo login.
+- Prevenção de duplicação durante a sincronização.
+
+## Como executar o projeto
+
+### 1. Pré-requisitos
+
+- Flutter instalado.
+- Dart instalado.
+- Google Chrome instalado.
+- Projeto configurado no Firebase.
+
+### 2. Clonar o repositório
+
+```bash
+git clone https://github.com/Gabriel-Palermo/Bloco-de-Notas.git
+```
+
+### 3. Entrar na pasta do projeto
+
+```bash
+cd Bloco-de-Notas
+```
+
+### 4. Instalar as dependências
+
+```bash
+flutter pub get
+```
+
+### 5. Configurar o SQLite para Web
+
+```bash
+dart run sqflite_common_ffi_web:setup
+```
+
+### 6. Executar no Chrome
+
+```bash
+flutter run -d chrome
+```
+
+## Firebase
+
+O projeto utiliza os seguintes serviços do Firebase:
+
+- **Authentication:** responsável pelo cadastro e login dos usuários.
+- **Cloud Firestore:** responsável pelo armazenamento das anotações na nuvem.
+
+As anotações são vinculadas ao identificador UID do usuário autenticado, permitindo que cada usuário acesse suas próprias informações.
+
+As regras de segurança do Firestore devem restringir o acesso aos documentos de acordo com o UID do usuário autenticado.
+
+## Testes realizados
+
+Foram realizados testes funcionais para verificar:
+
+- Criação de novas anotações.
+- Edição de anotações sem gerar documentos duplicados.
+- Exclusão de anotações no armazenamento local e na nuvem.
+- Sincronização entre SQLite e Firestore.
+- Recuperação das anotações após logout e novo login.
+- Persistência dos dados após atualizar a página.
+- Execução da aplicação no Google Chrome.
+
+## Autor
+
+**Gabriel Palermo**
+
+Projeto acadêmico desenvolvido no curso de Engenharia de Software.

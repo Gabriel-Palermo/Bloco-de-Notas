@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "880760892372",
+    "firebase_url": "https://blobo-de-notas-default-rtdb.firebaseio.com",
     "project_id": "blobo-de-notas",
     "storage_bucket": "blobo-de-notas.firebasestorage.app"
   },
